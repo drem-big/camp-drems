@@ -8,7 +8,6 @@ import { makeCardTemplate } from '../src/list-component.js';
 
 test('make card template', assert => {
     //arrange
-    //act
     const expected = /*html*/`
     <li>
         <a href="./campsite-detail.html" alt="campsite detail page">
@@ -18,6 +17,7 @@ test('make card template', assert => {
         </a>
     </li>
     `;
+    //act
 
     const result = makeCardTemplate(data);
 
