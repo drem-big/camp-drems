@@ -31,7 +31,7 @@
    -test: read options from query
    -test: if query has no page, then return page 1
    -the three functions get moved into hash-query src file
-
+------------------------------
 3. search-component.js
    -get search form by ID
    -const searchTermInput = searchForm.querySelector('input');
