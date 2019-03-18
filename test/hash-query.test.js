@@ -4,11 +4,6 @@ QUnit.module('hash query tests');
 
 function writeSearchToQuery(existingQuery, query, state) {
     const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('limit', 50);
-    searchParams.set('offset', 0);
-    searchParams.set('full', true);
-    searchParams.set('activity', 'CAMPING');
-    searchParams.set('apikey', 'cb99ea00-0bd2-4742-bd89-341cf682661d');
     searchParams.set('query', query);
     searchParams.set('state', state);
 
@@ -21,7 +16,7 @@ test('write search to query', assert => {
     const state = 'OR';
     
     const existingQuery = '';
-    const expected = 'limit=50&offset=0&full=true&activity=CAMPING&apikey=cb99ea00-0bd2-4742-bd89-341cf682661d&query=eastern+oregon&state=OR';
+    const expected = 'query=eastern+oregon&state=OR';
 
     //act
     const result = writeSearchToQuery(existingQuery, query, state);
@@ -35,8 +30,7 @@ function readSearchFromQuery(existingQuery) {
     const url = new URLSearchParams(existingQuery);
     const searchObject = {
         query: url.get('query'),
-        state: url.get('state'),
-        offset: parseInt(url.get('offset'))
+        state: url.get('state')
     };
 
     return searchObject;
@@ -44,14 +38,32 @@ function readSearchFromQuery(existingQuery) {
 
 test('read searech to query', assert => {
     //arrange
-    const existingQuery = 'limit=50&offset=0&full=true&activity=CAMPING&apikey=cb99ea00-0bd2-4742-bd89-341cf682661d&query=eastern+oregon&state=OR';
+    const existingQuery = 'query=eastern+oregon&state=OR';
     const expected = {
         query: 'eastern oregon',
-        state: 'OR',
-        offset: 0
+        state: 'OR'
     };
     //act
     const result = readSearchFromQuery(existingQuery);
     //assert
     assert.deepEqual(result, expected);
-})
+});
+
+QUnit.module('write page to query');
+
+function writePageToQuery(existingQuery, p) {
+    const url = new URLSearchParams(existingQuery);
+    url.set('p', p);
+    return url.toString();
+}
+
+test('write page to query', assert => {
+    //arrange
+    const existingQuery = 'query=eastern+oregon&state=OR&p=1';
+    const p = 2;
+    //act
+    const expected = 'query=eastern+oregon&state=OR&p=2';
+    const query = writePageToQuery(existingQuery, p);
+    //assert
+    assert.equal(query, expected);
+});
