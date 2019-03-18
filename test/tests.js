@@ -1,2 +1,3 @@
 import './html-equal.js';
-import './template-component.test.js';
+import './header-component.test.js';
+import './list-component.test.js';
