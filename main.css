@@ -39,12 +39,46 @@ header div {
     border-radius: 5px;
 }
 
-#search-form item {
-    
+#search-form element {
+    margin: 5px;
 }
 
 footer {
     background-color: black;
     color: white;
     height: 50px;
+}
+
+#results-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+}
+
+li {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+li img {
+    width: 75%;
 }
