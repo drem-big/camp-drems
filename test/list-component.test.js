@@ -4,21 +4,7 @@ const test = QUnit.test;
 
 QUnit.module('template literal for camp cards');
 
-function makeCardTemplate(data) {
-
-    const html = /*html*/ `
-    <li>
-        <a href="./campsite-detail.html" alt="campsite detail page">
-            <h3>${data.RECDATA[0].FacilityName}</h3>
-            <img src="${data.RECDATA[0].MEDIA[0].URL}" alt="title.name" class="campsite-image">
-            <p>Location</p>
-        </a>
-    </li>
-`;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
+import { makeCardTemplate } from '../src/list-component.js';
 
 test('make card template', assert => {
     //arrange

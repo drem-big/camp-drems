@@ -1,4 +1,4 @@
-{
+export const dataList = {
     "RECDATA": [
         {
             "FacilityID": "251914",
