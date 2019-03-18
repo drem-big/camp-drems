@@ -14,6 +14,7 @@ function writeSearchToQuery(existingQuery, query, state) {
 
     return searchParams.toString();
 }
+
 test('write search to query', assert => {
     //arrange
     const query = 'eastern oregon';
@@ -29,3 +30,28 @@ test('write search to query', assert => {
 
     assert.equal(result, expected);
 });
+
+function readSearchFromQuery(existingQuery) {
+    const url = new URLSearchParams(existingQuery);
+    const searchObject = {
+        query: url.get('query'),
+        state: url.get('state'),
+        offset: parseInt(url.get('offset'))
+    };
+
+    return searchObject;
+}
+
+test('read searech to query', assert => {
+    //arrange
+    const existingQuery = 'limit=50&offset=0&full=true&activity=CAMPING&apikey=cb99ea00-0bd2-4742-bd89-341cf682661d&query=eastern+oregon&state=OR';
+    const expected = {
+        query: 'eastern oregon',
+        state: 'OR',
+        offset: 0
+    };
+    //act
+    const result = readSearchFromQuery(existingQuery);
+    //assert
+    assert.deepEqual(result, expected);
+})
