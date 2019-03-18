@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#user-profile {
+    display: flex;
+    align-items: center;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    background-image: url(./assets/sahin-yesilyaprak-546700-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 900px;
+    align-items: center;
+}
+
+#search-form {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 15%;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#search-form item {
+    
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+}

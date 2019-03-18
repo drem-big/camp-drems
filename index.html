@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>CampDrem</title>
 </head>
 <body>
+    <header id="header-container">
+        <div>
+            <h1>I Drem Of Camping</h1>
+            <nav>
+                <a href="./favorites/favorites.html">Favorites</a>
+                <a href="./search/search.html">Search</a>
+            </nav>
+            <section id="user-profile">
+                <img src="./assets/alien.png">
+                <span>User Name</span>
+                <button id="sign-out">SIGN OUT</button>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section id="image-container">
+            <!-- <img src="assets/sahin-yesilyaprak-546700-unsplash.jpg"> -->
+            <form id="search-form">
+                <label for="keyword">Keyword:</label>
+                <input type="text" id="keyword" name="keyword">
+                <select name="state" id="state">
+                    <option value="select-state">Select State</option>
+                    <option value="washington">WA</option>
+                    <option value="oregon">OR</option>
+                </select>
+                <button id="search-button">
+                    search
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>api credit lololol</p>
+    </footer>
     
+    <script type="module" src="src/index.js"></script>
 </body>
 </html>
