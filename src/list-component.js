@@ -22,8 +22,15 @@ export function makeCardTemplate(campsite) {
 const resultsList = document.getElementById('results-list'); 
 
 export default function loadCard(campsiteList) {
+    clearRows();
     campsiteList.forEach(campsite => {
         const dom = makeCardTemplate(campsite);
         resultsList.appendChild(dom);
     });
+}
+
+function clearRows() {
+    while(resultsList.children.length > 0) {
+        resultsList.lastElementChild.remove();
+    }
 }

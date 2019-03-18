@@ -31,7 +31,7 @@
    -test: read options from query
    -test: if query has no page, then return page 1
    -the three functions get moved into hash-query src file
-------------------------------
+
 3. search-component.js
    -get search form by ID
    -const searchTermInput = searchForm.querySelector('input');
@@ -40,7 +40,7 @@
        - make a variable existingQuery = window.location.hash.slice(1);
        - make a variable newQuery that calls writeSearchToQuery
        - change the window location to the newQuery
-
+------------------------------
 4. index.js
    - create an event listener for hash change
    - create a variable query that gets the url (hash slice)
