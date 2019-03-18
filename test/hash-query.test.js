@@ -18,12 +18,27 @@ test('write search to query', assert => {
     assert.equal(result, expected);
 });
 
-test('read searech to query', assert => {
+test('read search from query', assert => {
     //arrange
-    const existingQuery = 'query=eastern+oregon&state=OR';
+    const existingQuery = 'query=eastern+oregon&state=OR&p=1';
     const expected = {
         query: 'eastern oregon',
-        state: 'OR'
+        state: 'OR',
+        p: 1
+    };
+    //act
+    const result = readSearchFromQuery(existingQuery);
+    //assert
+    assert.deepEqual(result, expected);
+});
+
+test('if no page number, page number is 1', assert => {
+    //arrange
+    const existingQuery = 'query=eastern+oregon&state=OR&';
+    const expected = {
+        query: 'eastern oregon',
+        state: 'OR',
+        p: 1
     };
     //act
     const result = readSearchFromQuery(existingQuery);

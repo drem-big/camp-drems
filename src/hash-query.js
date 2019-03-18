@@ -8,9 +8,11 @@ export function writeSearchToQuery(existingQuery, query, state) {
 
 export function readSearchFromQuery(existingQuery) {
     const url = new URLSearchParams(existingQuery);
+    const pageNumber = parseInt(url.get('p') || 1);
     const searchObject = {
         query: url.get('query'),
-        state: url.get('state')
+        state: url.get('state'),
+        p: pageNumber 
     };
 
     return searchObject;
