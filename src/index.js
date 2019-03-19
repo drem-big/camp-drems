@@ -8,7 +8,7 @@ import { loadHeader } from './header-component.js';
 window.addEventListener('hashchange', loadQuery);
 
 
-loadHeader(user);
+loadHeader();
 
 function loadQuery() {
     const query = window.location.hash.slice(1);
