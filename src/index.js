@@ -5,10 +5,13 @@ import { readSearchFromQuery, writeSearchToQuery, writePageToQuery } from '../sr
 import makeSearchComponent from '../src/make-search-url.js';
 import { loadHeader } from './header-component.js';
 
-window.addEventListener('hashchange', loadQuery);
-
+const user = {
+    displayName: 'Anna',
+    photoURL: './assets/alien.png'
+};
 
 loadHeader(user);
+window.addEventListener('hashchange', loadQuery);
 
 function loadQuery() {
     const query = window.location.hash.slice(1);

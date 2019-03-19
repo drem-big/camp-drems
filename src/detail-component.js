@@ -27,9 +27,3 @@ export function makeImageTemplate(data) {
     return template.content;
 }
 
-// export function makeImageTemplate(data) {
-//     const html = /*html*/ `<img src="${data.RECDATA[0].URL}" alt="campsite photo">`;
-//     const template = document.createElement('template');
-//     template.innerHTML = html;
-//     return template.content;
-// }
