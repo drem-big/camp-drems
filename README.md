@@ -40,7 +40,6 @@
        - make a variable existingQuery = window.location.hash.slice(1);
        - make a variable newQuery that calls writeSearchToQuery
        - change the window location to the newQuery
-------------------------------
 4. index.js
    - create an event listener for hash change
    - create a variable query that gets the url (hash slice)
@@ -65,6 +64,8 @@
            loadMovies(body.results);
        });
 
+------------------------------
+//increment offset for paging 
 7. paging component
    - get all of the elements by ID
    - set currentPageNumber to 1
@@ -76,5 +77,32 @@
        - incriment, function
 Message Input
 
+8. Detail View
+    - render images
+    - make sure we have enough images for detailview to be diginified enough to be worth showing
+    - descriptions
+    - location copy (informortion)
+    - more links to external site 2 b late
+
+9. Firebase
+    - auth
+    - configure database (have data flowing freely through thing)
+    - login (email+google)
+    - favorites
+
+10. Favorites
+    - favorite functionality :re cards
+    - share favorites? (stertch)
+    - user commentds on favorite (_DREM)
+
+11. DREMM1NG
+    - proximity to t@[0_b311
+    - googgle maps directions (allow this location block/search)
+    - weather
+    - hiking projects for nearby hikes
+    - userstory: as a user I want to know when Dog mountain is in bloom
+    - userstory: as a user I want to avoid everyone all the time in all of the public places
+    - (INTROVERSION FILTER)
+    - EXTROVERSION FILTER (closest McMinnimans + Taco Bell to me)
 
 Message Anna Ridenour (they/them), Colin Coutts, Chris Lu
