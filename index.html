@@ -25,12 +25,11 @@
 
     <main>
         <section id="image-container">
-            <!-- <img src="assets/sahin-yesilyaprak-546700-unsplash.jpg"> -->
             <form id="search-form">
-                <label for="query">query:</label>
+                <label for="query">Keyword:</label>
                 <input type="text" id="query" name="query">
                 <select name="state" id="state">
-                    <option value="select-state">Select State</option>
+                    <option value="" hidden disabled selected>Select State</option>
                     <option value="WA">WA</option>
                     <option value="OR">OR</option>
                 </select>
@@ -39,6 +38,11 @@
                 </button>
             </form>
         </section>
+        <!-- <section id="buttons-container">
+            <button id="previous-button">&lt;&lt;</button>
+            Page<span id="current-page">1</span>of<span id="total-pages">100</span>
+            <button id="next-button">&gt;&gt;</button>
+        </section> -->
         
         <section id="results-container">
             <ul id= "results-list"> </ul>

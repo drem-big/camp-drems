@@ -30,7 +30,7 @@ header div {
 #search-form {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: white;
     height: 15%;
@@ -39,8 +39,12 @@ header div {
     border-radius: 5px;
 }
 
-#search-form element {
+#search-form * {
     margin: 5px;
+}
+
+#search-form button {
+    margin-left: 10px;
 }
 
 footer {
@@ -54,6 +58,8 @@ footer {
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-around;
+    overflow: auto;
+    max-height: 600px;
 }
 
 li {
@@ -81,4 +87,23 @@ li a {
 
 li img {
     width: 75%;
+}
+
+#buttons-container {
+    background: salmon;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+#buttons-container * {
+    margin: 5px;
+}
+
+#buttons-container button {
+    font-size: 25px;
+    border-radius: 5px;
 }
