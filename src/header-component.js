@@ -17,3 +17,9 @@ export default function makeHeaderTemplate(user) {
     template.innerHTML = html;
     return template.content;
 }
+
+const headerContainer = document.getElementById('header-container');
+export function loadHeader(user) {
+    const dom = makeHeaderTemplate(user);
+    headerContainer.appendChild(dom);
+}
