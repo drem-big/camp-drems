@@ -6,10 +6,7 @@ import makeSearchComponent from '../src/make-search-url.js';
 import { loadHeader } from './header-component.js';
 
 window.addEventListener('hashchange', loadQuery);
-const user = {
-    displayName: 'Anna',
-    photoURL: './assets/alien.png'
-};
+
 
 loadHeader(user);
 
