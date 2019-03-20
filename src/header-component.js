@@ -5,8 +5,8 @@ export default function makeHeaderTemplate() {
     <div id="header-div">
         <h1>I Drem Of Camping</h1>
         <nav>
-            <a href="./favorites/favorites.html">Favorites</a>
-            <a href="./search/search.html">Search</a>
+            <a href="./favorites.html">Favorites</a>
+            <a href="./index.html">Search</a>
         </nav>
     </div>
     `;
