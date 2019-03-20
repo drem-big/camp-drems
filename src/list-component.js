@@ -7,16 +7,11 @@ export function makeCardTemplate(campsite) {
     }
 
     let campsiteLocation = null;
-    if(!campsite.FACILITYADDRESS[0].City) {
-        campsiteLocation = campsite.RECAREA[0].RecAreaName;
-    }
-    else if(!campsite.RECAREA[0].RecAreaName) {
-        campsiteLocation = campsite.FACILITYADDRESS[0].City;
+    if(!campsite.FacilityLatitude || !campsite.FacilityLongitude) {
+        campsiteLocation = '';
     } else {
-        campsiteLocation = campsite.RECAREA[0].RecAreaName + ' , ' + campsite.FACILITYADDRESS[0].City;
+        campsiteLocation = campsite.FacilityLatitude + ' , ' + campsite.FacilityLongitude;
     }
-
-    //need to addres instance where no RecAreaName;
     
     const html = /*html*/ `
     <li>
