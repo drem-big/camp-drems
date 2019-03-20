@@ -1,8 +1,8 @@
 import { auth } from './firebase.js';
 
-export default function makeHeaderTemplate(user) {
+export default function makeHeaderTemplate() {
     const html = /*html*/`
-    <div>
+    <div id="header-div">
         <h1>I Drem Of Camping</h1>
         <nav>
             <a href="./favorites/favorites.html">Favorites</a>
@@ -19,11 +19,11 @@ function makeProfile(user) {
     const avatar = user.photoURL || 'assets/alien.png';
 
     const html = /*html*/`
-        <section id="user-profile">
+        <div id="user-profile">
             <img src="${avatar}">
             <span>${user.displayName}</span>
             <button id="sign-out">SIGN OUT</button>
-        </section>
+        </div>
     `;
 
     const template = document.createElement('template');
@@ -42,6 +42,8 @@ export function loadHeader(options) {
         return;
     }
 
+    const headerDiv = document.getElementById('header-div');
+
     auth.onAuthStateChanged(user => {
         if(user) {
             const userDom = makeProfile(user);
@@ -50,7 +52,7 @@ export function loadHeader(options) {
                 auth.signOut();
                 window.location.hash = '';
             });
-            headerContainer.appendChild(userDom);
+            headerDiv.appendChild(userDom);
         }
         else {
             window.location = './auth.html' + window.location.hash;
