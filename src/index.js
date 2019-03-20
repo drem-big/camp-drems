@@ -10,8 +10,9 @@ const user = {
     photoURL: './assets/alien.png'
 };
 
-loadHeader(user);
 window.addEventListener('hashchange', loadQuery);
+
+loadHeader();
 
 function loadQuery() {
     const query = window.location.hash.slice(1);

@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-header div {
+#header-div {
     display: flex;
     align-items: center;
     justify-content: space-between;
