@@ -63,12 +63,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    padding: 20px;
+    /* margin-bottom: 40px; */
+}
+
+#header-div a {
+    /* border: 2px solid black; */
+    margin: 100px;
 }
 
 #user-profile {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 18%;
+    padding-right: 20px;
 }
 
 #image-container {
