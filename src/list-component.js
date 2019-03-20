@@ -32,7 +32,7 @@ export function makeCardTemplate(campsite) {
 
 const resultsList = document.getElementById('results-list'); 
 
-export default function loadCard(campsiteList) {
+export default function loadCard(campsiteList, makeCardTemplate) {
     clearRows();
     campsiteList.forEach(campsite => {
         const dom = makeCardTemplate(campsite);

@@ -4,6 +4,7 @@ import updateSearchTerm from '../search/search-component.js';
 import { readSearchFromQuery } from '../src/hash-query.js';
 import makeSearchComponent from '../src/make-search-url.js';
 import { loadHeader } from './header-component.js';
+import { makeCardTemplate } from './list-component.js';
 
 window.addEventListener('hashchange', loadQuery);
 
@@ -22,7 +23,7 @@ function loadQuery() {
     fetch(url)
         .then(res => res.json())
         .then(results => {
-            loadCard(results.RECDATA);
+            loadCard(results.RECDATA, makeCardTemplate);
         });
 }
 
