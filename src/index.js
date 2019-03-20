@@ -9,6 +9,13 @@ import { makeCardTemplate } from './list-component.js';
 window.addEventListener('hashchange', loadQuery);
 
 loadHeader();
+const loadurl = 'https://cors-anywhere.herokuapp.com/https://ridb.recreation.gov/api/v1/facilities?limit=50&full=true&activity=CAMPING&apikey=cb99ea00-0bd2-4742-bd89-341cf682661d&query=north+cascades&state=WA';
+
+fetch(loadurl)
+    .then(res => res.json())
+    .then(results => {
+        loadCard(results.RECDATA, makeCardTemplate);
+    });
 
 function loadQuery() {
     const query = window.location.hash.slice(1);
