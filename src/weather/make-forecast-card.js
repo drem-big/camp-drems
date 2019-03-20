@@ -1,8 +1,8 @@
-export default function makeForecastCard(forecast) {
+export default function makeForecastCard(day) {
     const html = /*html*/ `
         <li class="forecast-item">
-            <p>Date + Time: ${forecast.list[0].dt_txt}</p> 
-            <p>Weather: ${forecast.list[0].main.temp}°, ${forecast.list[0].weather[0].description}</p>
+            <p>Date + Time: ${day.dt_txt}</p> 
+            <p>Temp: ${day.main.temp}°  Weather: ${day.weather[0].description}</p>
         </li>   
     `;
 
