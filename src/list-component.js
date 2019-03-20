@@ -9,10 +9,24 @@ export function makeCardTemplate(campsite) {
     }
 
     let campsiteLocation = null;
-    if(!campsite.FacilityLatitude || !campsite.FacilityLongitude) {
-        campsiteLocation = '';
+
+    if(campsite.RECAREA[0] && campsite.RECAREA[0].RecAreaName) {
+        campsiteLocation = campsite.RECAREA[0].RecAreaName + ' , ' + campsite.FACILITYADDRESS[0].AddressStateCode;
+        console.log('has rec area');
     } else {
-        campsiteLocation = campsite.FacilityLatitude + ' , ' + campsite.FacilityLongitude;
+        console.log('does not have rec area');
+        if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].City) {
+            campsiteLocation = campsite.FACILITYADDRESS[0].City + ' , ' + campsite.FACILITYADDRESS[0].AddressStateCode;
+        }
+        else if(campsite.FacilityLatitude && campsite.FacilityLongitude) {
+            campsiteLocation = campsite.FacilityLatitude + ' , ' + campsite.FacilityLongitude + ' , ' + campsite.FACILITYADDRESS[0].AddressStateCode;
+        }
+        else if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].AddressStateCode) {
+            campsiteLocation = campsite.FACILITYADDRESS[0].AddressStateCode;
+        }
+        else {
+            campsiteLocation = '';
+        }
     }
     
     const html = /*html*/ `
@@ -21,7 +35,7 @@ export function makeCardTemplate(campsite) {
         <a href="./campsite-detail.html?facilityId=${campsite.FacilityID}" alt="campsite detail page">
             <h3>${campsite.FacilityName}</h3>
             <img src="${campsiteURL}" alt="title.name" class="campsite-image">
-            <p>${campsiteLocation}, ${campsite.FACILITYADDRESS[0].AddressStateCode}</p>
+            <p>${campsiteLocation}</p>
         </a>
     </li>
 `;
