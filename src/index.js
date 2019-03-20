@@ -1,14 +1,9 @@
 // import makeHeaderTemplate from './header-component.js';
 import loadCard from './list-component.js';
 import updateSearchTerm from '../search/search-component.js';
-import { readSearchFromQuery, writeSearchToQuery, writePageToQuery } from '../src/hash-query.js';
+import { readSearchFromQuery } from '../src/hash-query.js';
 import makeSearchComponent from '../src/make-search-url.js';
 import { loadHeader } from './header-component.js';
-
-const user = {
-    displayName: 'Anna',
-    photoURL: './assets/alien.png'
-};
 
 window.addEventListener('hashchange', loadQuery);
 

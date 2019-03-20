@@ -5,12 +5,25 @@ export function makeCardTemplate(campsite) {
     } else {
         campsiteURL = campsite.MEDIA[0].URL;
     }
+
+    let campsiteLocation = null;
+    if(!campsite.FACILITYADDRESS[0].City) {
+        campsiteLocation = campsite.RECAREA[0].RecAreaName;
+    }
+    else if(!campsite.RECAREA[0].RecAreaName) {
+        campsiteLocation = campsite.FACILITYADDRESS[0].City;
+    } else {
+        campsiteLocation = campsite.RECAREA[0].RecAreaName + ' , ' + campsite.FACILITYADDRESS[0].City;
+    }
+
+    //need to addres instance where no RecAreaName;
+    
     const html = /*html*/ `
     <li>
         <a href="./campsite-detail.html?facilityId=${campsite.FacilityID}" alt="campsite detail page">
             <h3>${campsite.FacilityName}</h3>
             <img src="${campsiteURL}" alt="title.name" class="campsite-image">
-            <p>Location</p>
+            <p>${campsiteLocation}, ${campsite.FACILITYADDRESS[0].AddressStateCode}</p>
         </a>
     </li>
 `;
