@@ -76,6 +76,44 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                     campsiteFavorite.src = '../assets/tentwhite.png';
                 }
 
+                let imageURL = null;
+                if(campsite.MEDIA[0] && campsite.MEDIA[0].URL) {
+                    imageURL = campsite.MEDIA[0].URL
+                } else {
+                    imageURL = 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg';
+                }
+
+                let longitude = null;
+                let latitude = null;
+                if(campsite.FacilityLatitude && campsite.FacilityLongitude) {
+                    longitude = campsite.FacilityLongitude;
+                    latitude = campsite.FacilityLatitude;
+                } else {
+                    longitude = '';
+                    latitude = '';
+                }
+
+                let state = null;
+                if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].AddressStateCode) {
+                    state = campsite.FACILITYADDRESS[0].AddressStateCode;
+                } else {
+                    state = '';
+                }
+                
+                let city = null;
+                if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].City) {
+                    city = campsite.FACILITYADDRESS[0].City;
+                } else {
+                    city = '';
+                }
+
+                let recArea = null;
+                if(campsite.RECAREA[0] && campsite.RECAREA[0].RecAreaName) {
+                    recArea = campsite.RECAREA[0].RecAreaName;
+                } else {
+                    recArea = '';
+                }
+
                 campsiteFavorite.addEventListener('click', () => {
                     if(isFavorite) {
                         userFavoriteCampsiteRef.remove();
@@ -85,12 +123,12 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                         userFavoriteCampsiteRef.set({
                             FacilityName: campsite.FacilityName,
                             FacilityID: campsite.FacilityID,
-                            campsiteURL: campsite.MEDIA[0].URL || 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg',
-                            FacilityLatitude: campsite.FacilityLatitude,
-                            FacilityLongitude: campsite.FacilityLongitude,
-                            AddressStateCode: campsite.FACILITYADDRESS[0].AddressStateCode,
-                            City: campsite.FACILITYADDRESS[0].City,
-                            RecAreaName: campsite.RECAREA[0].RecAreaName
+                            campsiteURL: imageURL,
+                            FacilityLatitude: latitude,
+                            FacilityLongitude: longitude,
+                            AddressStateCode: state,
+                            City: city,
+                            RecAreaName: recArea
                         });
                         addFavorite();
                     }
