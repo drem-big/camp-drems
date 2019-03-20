@@ -1,4 +1,4 @@
-import makeForecastCard from '../src/weather/make-forecast-card.js';
+import { makeForecastCard } from '../src/weather/make-forecast-card.js';
 
 const test = QUnit.test;
 
