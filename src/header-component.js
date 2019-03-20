@@ -54,9 +54,8 @@ export function loadHeader(options) {
             });
             headerDiv.appendChild(userDom);
         }
-        else {
-            window.location = './auth.html' + window.location.hash;
-        }  
-    });
+        // else {
+        //     window.location = './auth.html' + window.location.hash;
+    } );
 
 }

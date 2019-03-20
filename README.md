@@ -105,4 +105,8 @@ Message Input
     - (INTROVERSION FILTER)
     - EXTROVERSION FILTER (closest McMinnimans + Taco Bell to me)
 
-Message Anna Ridenour (they/them), Colin Coutts, Chris Lu
+Anna's To Do 
+    - logic of city/rec area on card (search list and favorites page)
+    - else/ifs for variables on list component
+    - auth redirect stuff
+    - if no result for search, display message
