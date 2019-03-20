@@ -8,6 +8,7 @@ import './make-search-component.test.js';
 import './image-template.test.js';
 import './favorite-card-component.test.js';
 import './make-favorites-array.test.js';
+import './weather-tempate.test.js';
 
 QUnit.done(() => {
     app.delete();

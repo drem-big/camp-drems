@@ -7,3 +7,4 @@ export default function makeSearchComponent(queryOptions) {
 
     return url.toString();
 }
+

@@ -1,11 +1,16 @@
 import { loadHeader } from './header-component.js';
 import makeDetailTemplate, { makeImageTemplate } from './detail-component.js';
 import { makeFacilityUrl, makeMediaUrl } from '../src/make-detail-url.js';
+import loadWeather from './weather/make-forecast-card.js';
+import makeWeatherUrl from './weather/make-weather-url.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 const facilityID = searchParams.get('facilityId');
+const lat = searchParams.get('lat');
+const lon = searchParams.get('lon');
 const facilityUrl = makeFacilityUrl(facilityID);
-const mediaUrl = makeMediaUrl(facilityID)
+const mediaUrl = makeMediaUrl(facilityID);
+const weatherUrl = makeWeatherUrl(lat, lon);
 
 const user = {
     displayName: 'Anna',
@@ -14,9 +19,6 @@ const user = {
 
 loadHeader(user);
 
-
-
-
 fetch(facilityUrl)
     .then(res => res.json())
     .then(results => {
@@ -24,22 +26,31 @@ fetch(facilityUrl)
         loadDetail(results);
     });
 
+fetch(mediaUrl)
+    .then(res => res.json())
+    .then(mediaResults => {
+        console.log(mediaResults);
+        loadImages(mediaResults);
+    });
+
+fetch(weatherUrl)
+    .then(res => res.json())
+    .then(results => {
+        loadWeather(results);
+    });
+
+
 function loadDetail(data) {
     const main = document.getElementById('main');
     const dom = makeDetailTemplate(data);
     main.appendChild(dom);
 }
 
-fetch(mediaUrl)
-    .then(res => res.json())
-    .then(mediaResults => {
-        console.log(mediaResults);
-        loadImages(mediaResults);
-    })
-
 function loadImages(data) {
     const main = document.getElementById('main');
     const dom = makeImageTemplate(data);
     main.appendChild(dom);
 }
+
+
 
