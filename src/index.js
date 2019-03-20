@@ -6,9 +6,11 @@ import makeSearchComponent from '../src/make-search-url.js';
 import { loadHeader } from './header-component.js';
 import { makeCardTemplate } from './list-component.js';
 
+
 window.addEventListener('hashchange', loadQuery);
 
 loadHeader();
+
 
 function loadQuery() {
     const query = window.location.hash.slice(1);

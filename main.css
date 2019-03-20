@@ -3,6 +3,62 @@
     margin: 0;
 }
 
+/* html { 
+    background: url(./assets/sahin-yesilyaprak-546700-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+
+.grid-header {
+    grid-area: header;
+    background: rgba(200,200,200);
+    position: fixed;
+    width: 100%;
+}
+
+.grid-main {
+    grid-area: main;
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    max-height: 500px;
+    align-items: center;
+    background: url(./assets/sahin-yesilyaprak-546700-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.grid-results {
+    grid-area: results;
+    background: lightblue;
+    width: 100%;
+    align-self: center;
+}
+
+.grid-footer {
+    grid-area: footer;
+    display: flex;
+    /* padding-top: 150px; */
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'results'
+    'footer';
+}
+
 #header-div {
     display: flex;
     align-items: center;
@@ -18,29 +74,44 @@
 #image-container {
     display: flex;
     justify-content: center;
-    border: 2px solid black;
-    background-image: url(./assets/sahin-yesilyaprak-546700-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    padding-top: 100px;
+    width: 1200px;
     height: 900px;
     align-items: center;
-}
+} 
 
 #search-form {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background: rgba(255,255,255,0.5);
     height: 15%;
     width: 50%;
     padding: 10px;
     border-radius: 5px;
 }
 
-#search-form * {
+#search-form input {
+    border: 5px solid rgba(255,255,255,0.5);
+    border-radius: 5px; 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+#search-form select {
+    /* border: 5px solid rgba(255,255,255,0.5); */
+    border-radius: 5px; 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+#search-form {
     margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #search-form button {
