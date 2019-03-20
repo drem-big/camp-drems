@@ -7,9 +7,6 @@ loadHeader();
 
 
 auth.onAuthStateChanged(user => {
-    if(!user){
-        window.location = './auth.html';
-    }
     const userFavoritesRef = favoritesByUserRef.child(user.uid);
     userFavoritesRef.on('value', snapshot => {
         const value = snapshot.val();
