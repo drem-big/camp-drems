@@ -115,6 +115,7 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                 }
 
                 campsiteFavorite.addEventListener('click', () => {
+                    
                     if(isFavorite) {
                         userFavoriteCampsiteRef.remove();
                         removeFavorite();
