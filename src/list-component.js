@@ -7,7 +7,7 @@ export function makeCardTemplate(campsite) {
     }
     const html = /*html*/ `
     <li>
-        <a href="./campsite-detail.html" alt="campsite detail page">
+        <a href="./campsite-detail.html?facilityId=${campsite.FacilityID}" alt="campsite detail page">
             <h3>${campsite.FacilityName}</h3>
             <img src="${campsiteURL}" alt="title.name" class="campsite-image">
             <p>Location</p>

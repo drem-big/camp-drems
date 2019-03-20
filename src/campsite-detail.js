@@ -1,20 +1,23 @@
 import { loadHeader } from './header-component.js';
-import makeDetailTemplate from './detail-component.js';
-import data from '../data/single-campsite.js';
+import makeDetailTemplate, { makeImageTemplate } from './detail-component.js';
+import { makeFacilityUrl, makeMediaUrl } from '../src/make-detail-url.js';
+
+const searchParams = new URLSearchParams(window.location.search);
+const facilityID = searchParams.get('facilityId');
+const facilityUrl = makeFacilityUrl(facilityID);
+const mediaUrl = makeMediaUrl(facilityID)
 
 const user = {
     displayName: 'Anna',
     photoURL: './assets/alien.png'
 };
+
 loadHeader(user);
-// loadDetail(data);
 
-const url = 'https://cors-anywhere.herokuapp.com/https://ridb.recreation.gov/api/v1/facilities/251914/?apikey=cb99ea00-0bd2-4742-bd89-341cf682661d';
 
-// if(!url) {
-//     return;
-// }
-fetch(url)
+
+
+fetch(facilityUrl)
     .then(res => res.json())
     .then(results => {
         console.log(results);
@@ -24,6 +27,19 @@ fetch(url)
 function loadDetail(data) {
     const main = document.getElementById('main');
     const dom = makeDetailTemplate(data);
-    
     main.appendChild(dom);
 }
+
+fetch(mediaUrl)
+    .then(res => res.json())
+    .then(mediaResults => {
+        console.log(mediaResults);
+        loadImages(mediaResults);
+    })
+
+function loadImages(data) {
+    const main = document.getElementById('main');
+    const dom = makeImageTemplate(data);
+    main.appendChild(dom);
+}
+
