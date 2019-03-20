@@ -1,4 +1,4 @@
-export default function makeForecastCard(day) {
+export function makeForecastCard(day) {
     const html = /*html*/ `
         <li class="forecast-item">
             <p>Date + Time: ${day.dt_txt}</p> 
@@ -9,4 +9,12 @@ export default function makeForecastCard(day) {
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
+}
+
+export default function loadWeather(forecast) {
+    const forecastDisplay = document.getElementById('forecast-list');
+    forecast.list.forEach(day => {
+        const dom = makeForecastCard(day);
+        forecastDisplay.appendChild(dom);
+    });
 }
