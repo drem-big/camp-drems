@@ -1,22 +1,8 @@
-import data from '../data/sample-media-data.js'
+import data from '../data/sample-media-data.js';
+import makeImageTemplate from '../src/detail-component.js';
 const test = QUnit.test;
 
 QUnit.module('image display template');
-
-function makeImageTemplate(data) {
-    const html = /*html*/ `
-        <div id="image-container">
-        ${data.RECDATA.map(image => {
-            return /*html*/ `
-                <img src="${image.URL}" alt="campsite photo">
-            `
-        }).join('')}
-        </div>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('template displays images from media data', assert => {
     //arrange
@@ -31,8 +17,8 @@ test('template displays images from media data', assert => {
     `;
 
     //act
-    const result = makeImageTemplate(data)
+    const result = makeImageTemplate(data);
     //assert
     assert.htmlEqual(result, expected);
-})
+});
 

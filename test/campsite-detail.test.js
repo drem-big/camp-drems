@@ -1,14 +1,9 @@
 import makeDetailTemplate from '../src/detail-component.js';
-
 import data from '../data/single-campsite.js';
 
 const test = QUnit.test;
 
-
 QUnit.module('template literal for campsite detail page');
-
-const facilityIdURL = 'https://ridb.recreation.gov/api/v1/facilities/251914/campsites?limit=50&offset=0';
-
 
 test('create html template for campsite detail', assert => {
     //arrange
