@@ -330,3 +330,33 @@ button:focus {
     font-size: 4em;
     color: rgba(43,48,58);
 }
+
+#trail-container {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px;
+}
+
+#nearby-trails {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    flex-direction: column;
+}
+
+#nearby-trails h2 {
+    margin: 20px 0 20px 0;
+}
+
+#trails-list {
+    display: flex;
+    flex-direction: row;
+}
+
+#trails-list a{
+    text-decoration: none;
+    color: black;
+}
