@@ -77,8 +77,8 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                 }
 
                 let imageURL = null;
-                if(campsite.MEDIA[0] && campsite.MEDIA[0].URL) {
-                    imageURL = campsite.MEDIA[0].URL
+                if(campsite.MEDIA && campsite.MEDIA[0].URL) {
+                    imageURL = campsite.MEDIA[0].URL;
                 } else {
                     imageURL = 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg';
                 }
@@ -94,21 +94,21 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                 }
 
                 let state = null;
-                if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].AddressStateCode) {
+                if(campsite.FACILITYADDRESS && campsite.FACILITYADDRESS[0].AddressStateCode) {
                     state = campsite.FACILITYADDRESS[0].AddressStateCode;
                 } else {
                     state = '';
                 }
                 
                 let city = null;
-                if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].City) {
+                if(campsite.FACILITYADDRESS && campsite.FACILITYADDRESS[0].City) {
                     city = campsite.FACILITYADDRESS[0].City;
                 } else {
                     city = '';
                 }
 
                 let recArea = null;
-                if(campsite.RECAREA[0] && campsite.RECAREA[0].RecAreaName) {
+                if(campsite.RECAREA && campsite.RECAREA[0].RecAreaName) {
                     recArea = campsite.RECAREA[0].RecAreaName;
                 } else {
                     recArea = '';

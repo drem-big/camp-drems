@@ -23,29 +23,26 @@ const user = {
 
 loadHeader(user);
 
-// fetch(facilityUrl)
-//     .then(res => res.json())
-//     .then(results => {
-//         console.log(results);
-//         loadDetail(results);
-//     });
+fetch(facilityUrl)
+    .then(res => res.json())
+    .then(results => {
+        loadDetail(results);
+    });
 
-// fetch(mediaUrl)
-//     .then(res => res.json())
-//     .then(mediaResults => {
-//         console.log(mediaResults);
-//         loadImages(mediaResults);
-//     });
+fetch(mediaUrl)
+    .then(res => res.json())
+    .then(mediaResults => {
+        loadImages(mediaResults);
+    });
 
-// fetch(weatherUrl)
-//     .then(res => res.json())
-//     .then(results => {
-//         loadWeather(results);
-//     });
+fetch(weatherUrl)
+    .then(res => res.json())
+    .then(results => {
+        loadWeather(results);
+    });
 
 fetch(googleUrl)
     .then(results => {
-        console.log(results);
         loadMap(results);
     });
 

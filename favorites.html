@@ -7,32 +7,33 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../favorites/favorites.css">
     <title>Your Favorites</title>
 </head>
 <body>
-    <header id="header-container">
-    </header>
-    
-    <main>
-        <h1>Your Favorites</h1>
+        <section class="grid-container">
+		
+                <section class="grid-header">
+                    <header id="header-container">
+                    </header>
+                </section>
+                
+                <main>
+        
+                    <section class="grid-results">
+                        <h1>favorites</h1>
+                        <section id="results-container">
+                            <ul id= "results-list"></ul>
+                        </section>
+                    </section>
+                </main>
+                <section class="grid-footer">
+                    <footer>
+                        <p>api credit lololol</p>
+                    </footer>
+                </section>
+         </section>
 
-        <section id="results-container">
-                <ul id= "results-list">
-                    <li>
-                        <span><img class="campsite-favorites" src="../assets/tentwhite.png"></span>
-                        <a href="./campsite-detail.html?facilityId=251914" alt="campsite detail page">
-                            <h3>MCNARY BEACH - SOCKEYE SHELTER (OR)</h3>
-                            <img src="https://cdn.recreation.gov/public/images/76416.jpg" alt="campsite image" class="campsite-image">
-                            <p>Location, OR</p>
-                        </a>
-                    </li>
-                </ul>
-        </section>
-
-    </main>
-
-    <footer></footer>
     <script type="module" src="./src/favorites.js"></script>
 </body>
 </html>
