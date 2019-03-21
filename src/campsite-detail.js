@@ -26,14 +26,12 @@ loadHeader(user);
 fetch(facilityUrl)
     .then(res => res.json())
     .then(results => {
-        console.log(results);
         loadDetail(results);
     });
 
 fetch(mediaUrl)
     .then(res => res.json())
     .then(mediaResults => {
-        console.log(mediaResults);
         loadImages(mediaResults);
     });
 
@@ -45,7 +43,6 @@ fetch(weatherUrl)
 
 fetch(googleUrl)
     .then(results => {
-        console.log(results);
         loadMap(results);
     });
 
