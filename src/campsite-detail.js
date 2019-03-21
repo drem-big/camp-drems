@@ -1,9 +1,10 @@
 import { loadHeader } from './header-component.js';
-import makeDetailTemplate, { makeImageTemplate, makeMapTemplate } from './detail-component.js';
+import makeDetailTemplate, { makeImageTemplate } from './detail-component.js';
 import { makeFacilityUrl, makeMediaUrl } from '../src/make-detail-url.js';
 import loadWeather from './weather/make-forecast-card.js';
 import makeWeatherUrl from './weather/make-weather-url.js';
 import makeMapurl from '../src/maps/make-map-url.js';
+import loadMap from '../src/maps/make-map-img.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 const facilityID = searchParams.get('facilityId');
@@ -14,14 +15,6 @@ const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
 const latLon = lat + ',' + lon;
 const googleUrl = makeMapurl(latLon.toString());
-
-
-fetch(googleUrl)
-    .then(results => {
-        console.log(results);
-        var mapDom = document.getElementById('googlepic');
-        mapDom.src = results.url;
-    });
 
 const user = {
     displayName: 'Anna',
@@ -50,12 +43,11 @@ fetch(weatherUrl)
         loadWeather(results);
     });
 
-function loadMap(data) {
-    const main = document.getElementById('main');
-    const dom = makeMapTemplate(data);
-    main.appendChild(dom);
-}
-
+fetch(googleUrl)
+    .then(results => {
+        console.log(results);
+        loadMap(results);
+    });
 
 function loadDetail(data) {
     const main = document.getElementById('main');

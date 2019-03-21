@@ -26,18 +26,3 @@ export function makeImageTemplate(data) {
     template.innerHTML = html;
     return template.content;
 }
-
-export function makeMapTemplate(data) {
-    const html = /*html*/ `
-        <div id="image-container">
-        ${data.RECDATA.map(image => {
-            return /*html*/ `
-                <img src="${image.URL}" alt="map">
-            `
-        }).join('')}
-        </div>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
