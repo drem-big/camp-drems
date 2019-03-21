@@ -9,7 +9,7 @@ import './image-template.test.js';
 import './favorite-card-component.test.js';
 import './make-favorites-array.test.js';
 import './weather-tempate.test.js';
-
+import './nearby-trails.test.js';
 QUnit.done(() => {
     app.delete();
 });
