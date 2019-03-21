@@ -1,8 +1,9 @@
 import { loadHeader } from './header-component.js';
-import makeDetailTemplate, { makeImageTemplate } from './detail-component.js';
+import makeDetailTemplate, { makeImageTemplate, makeMapTemplate } from './detail-component.js';
 import { makeFacilityUrl, makeMediaUrl } from '../src/make-detail-url.js';
 import loadWeather from './weather/make-forecast-card.js';
 import makeWeatherUrl from './weather/make-weather-url.js';
+import makeMapurl from '../src/maps/make-map-url.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 const facilityID = searchParams.get('facilityId');
@@ -12,28 +13,14 @@ const facilityUrl = makeFacilityUrl(facilityID);
 const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
 const latLon = lat + ',' + lon;
-const googleUrl = makeMapurl(latLon);
+const googleUrl = makeMapurl(latLon.toString());
 
-// const mapURL = makeMap
-console.log('latlon is ' + latLon);
-console.log(typeof latLon) + ' is typeof latlon';
-
-//latlon isn't being passed as a string?
-export function makeMapurl(latLon) {
-    const path = `https://maps.googleapis.com/maps/api/staticmap?center=${latLon}&zoom=12&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318%20&markers=color:red%7Clabel:C%7C40.718217,-73.998284%20&key=AIzaSyC5yJb3hg67IT1ooaA091M9-YUUbF_-svw`
-    const url = new URL(path);
-    return url.toString();
-}
 
 fetch(googleUrl)
-    // .then(res => res.json())
     .then(results => {
-        console.log(latLon + 'is latlon infunction');
-        console.log(results.url + ' is results.url');
-        const x = makeMapurl(results);
-        console.log(x + ' is x');
-        var dom_img = document.getElementById('googlepic');
-        dom_img.src = results.url;
+        console.log(results);
+        var mapDom = document.getElementById('googlepic');
+        mapDom.src = results.url;
     });
 
 const user = {
@@ -46,14 +33,14 @@ loadHeader(user);
 fetch(facilityUrl)
     .then(res => res.json())
     .then(results => {
-        // console.log(results);
+        console.log(results);
         loadDetail(results);
     });
 
 fetch(mediaUrl)
     .then(res => res.json())
     .then(mediaResults => {
-        // console.log(mediaResults);
+        console.log(mediaResults);
         loadImages(mediaResults);
     });
 
@@ -62,6 +49,12 @@ fetch(weatherUrl)
     .then(results => {
         loadWeather(results);
     });
+
+function loadMap(data) {
+    const main = document.getElementById('main');
+    const dom = makeMapTemplate(data);
+    main.appendChild(dom);
+}
 
 
 function loadDetail(data) {
