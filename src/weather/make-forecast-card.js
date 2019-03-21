@@ -13,8 +13,11 @@ export function makeForecastCard(day) {
 
 export default function loadWeather(forecast) {
     const forecastDisplay = document.getElementById('forecast-list');
-    forecast.list.forEach(day => {
-        const dom = makeForecastCard(day);
-        forecastDisplay.appendChild(dom);
+    forecast.list.map(day => {
+        if(day.dt_txt.includes('12:00:00')){
+            const dom = makeForecastCard(day);
+            forecastDisplay.appendChild(dom);
+        }
     });
 }
+
