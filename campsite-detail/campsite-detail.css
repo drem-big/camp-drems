@@ -50,15 +50,21 @@ div {
 
 .grid-container {
     display: flex;
+    flex-wrap: wrap;
     border: 2px solid yellow;
     padding-top: 50px;
-    flex-wrap: wrap;
     width: 100%;
+}
+
+#nearby-trails {
+    display: flex;
+    width: 100%;
+    border: 2px solid black;
 }
 
 .facility-name {
     border: 2px solid red;
-    width: 625px;
+    width: 600px;
     padding: 10px;
 }
 
@@ -103,16 +109,13 @@ div {
     justify-content: center;
     border: 2px solid green;
     width: 100%;
-}
-
-#forecast-display {
-    display: flex;
-    flex-direction: column;
-
+    height: 200px;
+    overflow: hidden;
 }
 
 #forecast-display ul {
     list-style: none;
+    /* z-index: 0; */
 }
 
 .grid-footer {
@@ -124,4 +127,13 @@ div {
     height: 150px;
     width: 100%;
     color: white;
+}
+
+#main {
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid purple;
+    height: 650px;
+    width: auto;
 }
