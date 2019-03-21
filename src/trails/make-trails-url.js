@@ -1,5 +1,5 @@
 export function makeTrailsUrl(lat, lon) {
-    const path = `https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=100&key=200431007-df4cdf0ad780091c4ea82a410f7badc2`;
+    const path = `https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=75&key=200431007-df4cdf0ad780091c4ea82a410f7badc2`;
     const url = new URL(path);
     return url.toString();
 }

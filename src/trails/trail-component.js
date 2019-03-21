@@ -10,7 +10,7 @@ export function makeTrailTemplate(trail) {
                 <h4>${trail.location}</h4>
                 <span>Trail Condition: ${trail.conditionStatus}</span>
                 <div id="distance-container">
-                    <p>Distance from Campground:</p>
+                    <p id="distance-title-${trail.id}"></p>
                     <p id="distance-${trail.id}"></p>
                     <p id="duration-${trail.id}"></p> 
                 </div>         
@@ -47,8 +47,10 @@ function getDistance(trail) {
             const duration = results.rows[0].elements[0].duration.text;
             const distanceText = document.getElementById(`distance-${trail.id}`);
             const durationText = document.getElementById(`duration-${trail.id}`);
+            const distanceTitle = document.getElementById(`distance-title-${trail.id}`);
             distanceText.textContent = distance;
             durationText.textContent = duration;
+            distanceTitle.textContent = 'Distance from Campground:';
         });
 }
 
