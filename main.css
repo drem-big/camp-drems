@@ -354,6 +354,9 @@ button:focus {
 #trails-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
 }
 
 #trails-list a{

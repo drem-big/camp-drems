@@ -3,3 +3,4 @@ export default function makeMapurl(latLon) {
     const url = new URL(path);
     return url.toString();
 }
+
