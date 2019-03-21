@@ -58,5 +58,3 @@ function loadImages(data) {
     main.appendChild(dom);
 }
 
-
-

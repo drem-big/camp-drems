@@ -6,7 +6,10 @@
 html { 
     font-family: 'Roboto', sans-serif;
     /* font-family: 'Open Sans', sans-serif; */
-  }
+    /* font-family: 'Lato', sans-serif; */
+}
+
+  
 
 #header-div {
     display: flex;
@@ -51,9 +54,9 @@ div {
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid yellow;
     padding-top: 50px;
     width: 100%;
+    background: rgb(149, 190, 166);
 }
 
 #nearby-trails {
@@ -63,7 +66,11 @@ div {
 }
 
 .facility-name {
-    border: 2px solid red;
+    background: rgb(220, 220, 220);
+    height: 600px;
+    overflow-y: auto;
+    line-height: 2em;
+    margin: 10px;
     width: 600px;
     padding: 10px;
 }
