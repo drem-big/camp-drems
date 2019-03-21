@@ -58,7 +58,7 @@ fetch(trailsUrl)
     });
 
 function loadDetail(data) {
-    const main = document.getElementById('main');
+    const main = document.getElementById('facility-info');
     const dom = makeDetailTemplate(data);
     main.appendChild(dom);
 }
@@ -68,6 +68,4 @@ function loadImages(data) {
     const dom = makeImageTemplate(data);
     main.appendChild(dom);
 }
-
-
 

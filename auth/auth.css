@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html { 
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Lato', sans-serif; */
+}
+
+.grid-header {
+    grid-area: header;
+    background-color: rgba(216,226,220);
+    position: fixed;
+    width: 100%;
+}
+  
+
+#header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* margin-bottom: 40px; */
+}
+
+#header-div a {
+    margin: 100px;
+    text-decoration: none;
+    color: rgba(43,48,58);
+}
+
+#header-div img {
+    height: 50px;
+    border-radius: 100%;
+}
+
+#header-div button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: rgba(43,48,58);
+    background: rgba(245,93,62,0.3);
+    border: none;
+}
+
+#user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    padding-right: 20px;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 800px;
+    border: 5px solid brown;
+    width: 300px;
+    height: 500px;
+    margin-top: 100px;
+}
+
+.login-container h1 {
+    padding-top: 180px;
+
+
+#firebaseui-auth-container {
+    /* padding-top: 100px; */
+}
