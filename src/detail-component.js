@@ -26,4 +26,3 @@ export function makeImageTemplate(data) {
     template.innerHTML = html;
     return template.content;
 }
-

@@ -10,3 +10,4 @@ export function makeMediaUrl(facilityID) {
     const url = new URL(path);
     return url.toString();
 }
+
