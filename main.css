@@ -70,11 +70,25 @@ html {
     color: rgba(43,48,58);
 }
 
+#header-div img {
+    height: 50px;
+    border-radius: 100%;
+}
+
+#header-div button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: rgba(43,48,58);
+    background: rgba(245,93,62,0.3);
+    border: none;
+}
+
 #user-profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 18%;
+    width: 20%;
     padding-right: 20px;
 }
 
@@ -118,6 +132,7 @@ html {
     padding: 15px;
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
+    font-size: .8em;
 }
 
 #search-form {
