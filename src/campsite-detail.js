@@ -11,25 +11,27 @@ const lon = searchParams.get('lon');
 const facilityUrl = makeFacilityUrl(facilityID);
 const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
-
-const googleurl = 'https://maps.googleapis.com/maps/api/staticmap?center=Black%20Rock%20City&zoom=12&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318%20&markers=color:red%7Clabel:C%7C40.718217,-73.998284%20&key=AIzaSyC5yJb3hg67IT1ooaA091M9-YUUbF_-svw';
-const mapURL = makeMap
-//filter for the thing I want
 const latLon = lat + ',' + lon;
+const googleUrl = makeMapurl(latLon);
+
+// const mapURL = makeMap
 console.log('latlon is ' + latLon);
+console.log(typeof latLon) + ' is typeof latlon';
 
-export function makeMap(latLon) {
+//latlon isn't being passed as a string?
+export function makeMapurl(latLon) {
     const path = `https://maps.googleapis.com/maps/api/staticmap?center=${latLon}&zoom=12&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318%20&markers=color:red%7Clabel:C%7C40.718217,-73.998284%20&key=AIzaSyC5yJb3hg67IT1ooaA091M9-YUUbF_-svw`
-
     const url = new URL(path);
     return url.toString();
 }
 
-fetch(googleurl)
+fetch(googleUrl)
     // .then(res => res.json())
     .then(results => {
-        console.log(results.url);
-        console.log('here');
+        console.log(latLon + 'is latlon infunction');
+        console.log(results.url + ' is results.url');
+        const x = makeMapurl(results);
+        console.log(x + ' is x');
         var dom_img = document.getElementById('googlepic');
         dom_img.src = results.url;
     });
