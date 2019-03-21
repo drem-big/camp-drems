@@ -14,7 +14,7 @@ const facilityUrl = makeFacilityUrl(facilityID);
 const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
 const latLon = lat + ',' + lon;
-const googleUrl = makeMapurl(latLon.toString());
+const googleUrl = makeMapurl(latLon);
 
 const user = {
     displayName: 'Anna',
@@ -23,25 +23,25 @@ const user = {
 
 loadHeader(user);
 
-fetch(facilityUrl)
-    .then(res => res.json())
-    .then(results => {
-        console.log(results);
-        loadDetail(results);
-    });
+// fetch(facilityUrl)
+//     .then(res => res.json())
+//     .then(results => {
+//         console.log(results);
+//         loadDetail(results);
+//     });
 
-fetch(mediaUrl)
-    .then(res => res.json())
-    .then(mediaResults => {
-        console.log(mediaResults);
-        loadImages(mediaResults);
-    });
+// fetch(mediaUrl)
+//     .then(res => res.json())
+//     .then(mediaResults => {
+//         console.log(mediaResults);
+//         loadImages(mediaResults);
+//     });
 
-fetch(weatherUrl)
-    .then(res => res.json())
-    .then(results => {
-        loadWeather(results);
-    });
+// fetch(weatherUrl)
+//     .then(res => res.json())
+//     .then(results => {
+//         loadWeather(results);
+//     });
 
 fetch(googleUrl)
     .then(results => {
