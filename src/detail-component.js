@@ -1,8 +1,8 @@
 export default function makeDetailTemplate(data) {
     const html = /*html*/ `
-    <article>
-        <h1 id="facility-name">${data.FacilityName}</h1>
-        <p id="location">${data.FacilityDirections}</p>
+    <article class="facility-name">
+        <h1>${data.FacilityName}</h1>
+        <p>${data.FacilityDirections}</p>
         <div>${data.FacilityDescription}</div>
     </article>
             `;
