@@ -64,7 +64,6 @@
            loadMovies(body.results);
        });
 
-------------------------------
 //increment offset for paging 
 7. paging component
    - get all of the elements by ID
@@ -110,3 +109,5 @@ Anna's To Do
     - else/ifs for variables on list component
     - auth redirect stuff
     - if no result for search, display message
+
+    ------------------------------
