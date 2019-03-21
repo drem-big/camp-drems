@@ -1,5 +1,5 @@
 import data from '../data/sample-media-data.js';
-import makeImageTemplate from '../src/detail-component.js';
+import { makeImageTemplate } from '../src/detail-component.js';
 const test = QUnit.test;
 
 QUnit.module('image display template');
