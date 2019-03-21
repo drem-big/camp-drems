@@ -1,7 +1,7 @@
 import { loadHeader } from './header-component.js';
 import makeDetailTemplate, { makeImageTemplate } from './detail-component.js';
 import { makeFacilityUrl, makeMediaUrl } from '../src/make-detail-url.js';
-import loadWeather, { makeForecastCard } from './weather/make-forecast-card.js';
+import loadWeather from './weather/make-forecast-card.js';
 import makeWeatherUrl from './weather/make-weather-url.js';
 import makeMapurl from '../src/maps/make-map-url.js';
 import loadMap from '../src/maps/make-map-img.js';
@@ -53,7 +53,6 @@ fetch(googleUrl)
 fetch(trailsUrl)
     .then(response => response.json())
     .then(results => {
-        console.log(results);
         loadTrails(results.trails);
     });
 

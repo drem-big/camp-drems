@@ -12,9 +12,7 @@ export function makeCardTemplate(campsite) {
 
     if(campsite.RECAREA[0] && campsite.RECAREA[0].RecAreaName) {
         campsiteLocation = campsite.RECAREA[0].RecAreaName + ' , ' + campsite.FACILITYADDRESS[0].AddressStateCode;
-        console.log('has rec area');
     } else {
-        console.log('does not have rec area');
         if(campsite.FACILITYADDRESS[0] && campsite.FACILITYADDRESS[0].City) {
             campsiteLocation = campsite.FACILITYADDRESS[0].City + ' , ' + campsite.FACILITYADDRESS[0].AddressStateCode;
         }
