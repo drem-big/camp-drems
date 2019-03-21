@@ -78,7 +78,7 @@ export default function loadCard(campsiteList, makeCardTemplate) {
 
                 let imageURL = null;
                 if(campsite.MEDIA[0] && campsite.MEDIA[0].URL) {
-                    imageURL = campsite.MEDIA[0].URL
+                    imageURL = campsite.MEDIA[0].URL;
                 } else {
                     imageURL = 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg';
                 }

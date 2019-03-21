@@ -198,12 +198,47 @@ li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-decoration: none;
+    color: rgba(43,48,58);
 
 }
 
-li img {
-    width: 75%;
+.campsite-image {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    overflow: hidden;
 }
+
+.campsite-favorites {
+    display: flex;
+    padding-left: 150px;
+    width: 40px;
+    height: auto;
+    margin: 10px;
+    overflow: hidden;
+}
+
+span img {
+    padding-bottom: 15px;
+
+}
+
+li {
+    width: 275px;
+}
+li h3 {
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+li p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    font-size: .8em;
+}
+
+
 
 /* #buttons-container {
     background: salmon;
@@ -227,4 +262,26 @@ li img {
 #activities-list {
     list-style: none;
     
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: white;
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+/* input:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+} */
+
+#results-container h1 {
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    text-align: center;
+    font-size: 4em;
+    color: rgba(43,48,58);
 }
