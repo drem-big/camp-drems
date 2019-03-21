@@ -14,7 +14,7 @@ const facilityUrl = makeFacilityUrl(facilityID);
 const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
 const latLon = lat + ',' + lon;
-const googleUrl = makeMapurl(latLon.toString());
+const googleUrl = makeMapurl(latLon);
 
 const user = {
     displayName: 'Anna',
