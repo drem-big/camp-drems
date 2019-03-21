@@ -235,7 +235,9 @@ li p {
     font-size: .8em;
 }
 
-
+#main {
+    border: 2px solid green;
+}
 
 /* #buttons-container {
     background: salmon;

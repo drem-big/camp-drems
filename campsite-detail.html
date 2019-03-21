@@ -7,22 +7,35 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./campsite-detail/campsite-detail.css">
     <title>Campsite Deets</title>
 </head>
 <body>
-    <header id="header-container">
-    </header>
-    <main>
+    <section class="grid-header">
+        <header id="header-container"></header>
+    </section>
+    <section class="grid-container">
+
+        <section id="facility-info"></section>
+        
         <section id="main">
         </section>
+
+        
+
         <section id="forecast-display">
             <h2>Local 5 Day Forecast</h2>
             <ul id="forecast-list">
+                
             </ul>
         </section>
-    </main>
-    <footer>sup</footer>
+
+
+        <section class="grid-footer">
+            <footer>sup</footer>
+        </section>
+
+    </section>
     <script type="module" src="./src/campsite-detail.js"></script>
 </body>
 </html>

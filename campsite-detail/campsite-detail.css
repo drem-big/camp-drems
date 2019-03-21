@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html { 
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+  }
+
+#header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* margin-bottom: 40px; */
+}
+
+#header-div a {
+    margin: 100px;
+    text-decoration: none;
+    color: rgba(43,48,58);
+}
+
+#header-div img {
+    height: 50px;
+    border-radius: 100%;
+}
+
+#header-div button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: rgba(43,48,58);
+    background: rgba(245,93,62,0.3);
+    border: none;
+}
+
+#user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    padding-right: 20px;
+}
+/* 
+div {
+    border: 2px solid red;
+} */
+
+.grid-container {
+    display: flex;
+    border: 2px solid yellow;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.facility-name {
+    border: 2px solid red;
+    width: 625px;
+    padding: 10px;
+}
+
+.facility-name h1{
+    font-size: 1.3em;
+}
+
+.facility-name p {
+    font-size: 1em;
+}
+
+.facility-name div {
+    font-size: 1em;
+}
+
+.facility-name h2 {
+    font-size: 1.3em;
+}
+
+#googlepic {
+    display: flex;
+    justify-content: flex-start;
+    border: 2px solid blue;
+}
+
+#image-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 600px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+#image-container img {
+    width: auto;
+    height: 150px;
+}
+
+#forecast-display {
+    display: flex;
+    justify-content: center;
+    border: 2px solid green;
+    width: 100%;
+}
+
+#forecast-display {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#forecast-display ul {
+    list-style: none;
+}
+
+.grid-footer {
+    grid-area: footer;
+    display: flex;
+    background: black;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 150px;
+    width: 100%;
+    color: white;
+}

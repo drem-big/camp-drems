@@ -50,7 +50,7 @@ fetch(googleUrl)
     });
 
 function loadDetail(data) {
-    const main = document.getElementById('main');
+    const main = document.getElementById('facility-info');
     const dom = makeDetailTemplate(data);
     main.appendChild(dom);
 }
