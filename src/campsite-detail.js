@@ -11,6 +11,18 @@ const lon = searchParams.get('lon');
 const facilityUrl = makeFacilityUrl(facilityID);
 const mediaUrl = makeMediaUrl(facilityID);
 const weatherUrl = makeWeatherUrl(lat, lon);
+const googleurl = 'https://maps.googleapis.com/maps/api/staticmap?center=Black%20Rock%20City&zoom=12&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318%20&markers=color:red%7Clabel:C%7C40.718217,-73.998284%20&key=AIzaSyC5yJb3hg67IT1ooaA091M9-YUUbF_-svw';
+
+//filter for the thing I want
+
+fetch(googleurl)
+    // .then(res => res.json())
+    .then(results => {
+        console.log(results.url);
+        console.log('here');
+        var dom_img = document.getElementById('googlepic');
+        dom_img.src = results.url;
+    });
 
 const user = {
     displayName: 'Anna',
@@ -22,14 +34,14 @@ loadHeader(user);
 fetch(facilityUrl)
     .then(res => res.json())
     .then(results => {
-        console.log(results);
+        // console.log(results);
         loadDetail(results);
     });
 
 fetch(mediaUrl)
     .then(res => res.json())
     .then(mediaResults => {
-        console.log(mediaResults);
+        // console.log(mediaResults);
         loadImages(mediaResults);
     });
 
