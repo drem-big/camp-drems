@@ -51,8 +51,9 @@ test('template mirrors html for forecast data', assert => {
 
     const expected = /*html*/ `
         <li class="forecast-item">
-            <p>Date + Time: 2019-03-20 21:00:00</p> 
-            <p>Temp: 51.51°</p> <p>Weather: light rain</p>
+            <img src="../../assets/weather-icons/rain.png" alt="weather-icon" class="weather-icon">
+            <p>Wed Mar 20 2019</p> 
+            <p>51.51°F</p> <p>light rain</p>
         </li>
     `;
     //act
