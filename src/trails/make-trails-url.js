@@ -5,7 +5,6 @@ export function makeTrailsUrl(lat, lon) {
 }
 
 export function makeDistanceUrl(campLat, campLon, trailLat, trailLon) {
-    // const path = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${campLat},${campLon}&destinations=${trailLat},${trailLon}&key=AIzaSyC5yJb3hg67IT1ooaA091M9-YUUbF_-svw`;
     const path = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${campLat},${campLon}&destinations=${trailLat},${trailLon}&key=AIzaSyCn4CbIaeP7Hp0FLzIhJLvKHfh_xJ4kDIM`;
     const url = new URL(path);
     return url.toString();
