@@ -39,7 +39,11 @@ test('template literal for trail cards', assert => {
                 <img src="https://cdn-files.apstatic.com/hike/7005382_smallMed_1435421346.jpg" alt="picture from trail">
                 <h4>Boulder, Colorado</h4>
                 <span>Trail Condition: Minor Issues</span>
-                <p>Stretch Goal: Distance</p>          
+                <div id="distance-container"> 
+                    <p id="distance-title-7000130"></p> 
+                    <p id="distance-7000130"></p> 
+                    <p id="duration-7000130"></p> 
+                </div>        
             </div>
         </a>
     `;

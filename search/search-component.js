@@ -6,7 +6,6 @@ const stateInput = form.querySelector('select');
 
 document.addEventListener('submit', event => {
     event.preventDefault();
-    console.log('hi');
     const query = keywordInput.value;
     const state = stateInput.value;
 

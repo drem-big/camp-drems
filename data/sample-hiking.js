@@ -79,4 +79,4 @@ export const hikingData = {
     'success': 1
 };
 
-const sampleURL = 'https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200431007-df4cdf0ad780091c4ea82a410f7badc2';
+// const sampleURL = 'https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200431007-df4cdf0ad780091c4ea82a410f7badc2';

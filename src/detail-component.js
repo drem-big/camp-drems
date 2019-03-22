@@ -1,3 +1,5 @@
+/* eslint-disable*/
+
 export default function makeDetailTemplate(data) {
     const html = /*html*/ `
     <article class="facility-name">
@@ -18,7 +20,7 @@ export function makeImageTemplate(data) {
         ${data.RECDATA.map(image => {
             return /*html*/ `
                 <img src="${image.URL}" alt="campsite photo" class="slideshow-image">
-            `
+            `;
         }).join('')}
         </div>
     `;
