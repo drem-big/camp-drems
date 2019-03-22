@@ -22,7 +22,7 @@ html {
     background: rgb(149, 190, 166);
     width: 100%;
     align-self: center;
-    /* height:100%; */
+    height: 1200px;
 }
 
 .grid-results h1 {
@@ -182,10 +182,9 @@ li a {
 
 .campsite-favorites {
     display: flex;
-    padding-left: 150px;
+    margin-left: 150px;
     width: 40px;
     height: auto;
-    margin: 10px;
     overflow: hidden;
 }
 

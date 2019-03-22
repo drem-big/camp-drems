@@ -55,9 +55,11 @@ html {
 .auth-container {
     display: flex;
     justify-content: center;
-    background-image: url(../assets/caleb-s-735324-unsplash.jpg);
-    height:900px;
+    background-image: url(../assets/viktor-mogilat-14772-unsplash.jpg);
+    background-size: cover;
+    height:1200px;
 }
+
 
 .login-container {
     display: flex;
