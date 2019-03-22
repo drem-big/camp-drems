@@ -63,7 +63,9 @@ function loadDetail(data) {
 }
 
 function loadImages(data) {
-    const main = document.getElementById('main');
+    const main = document.getElementById('image-container');
     const dom = makeImageTemplate(data);
     main.appendChild(dom);
 }
+
+    

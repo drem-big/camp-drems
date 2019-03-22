@@ -267,9 +267,10 @@ li a:hover {
 
 .campsite-image {
     width: 200px;
-    height: auto;
+    height: 150px;
     margin: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    object-fit: none;
 }
 
 .campsite-favorites {
