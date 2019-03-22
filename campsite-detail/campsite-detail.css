@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color:rgba(216,226,220);
+    background-color:#95BDA6;
 }
 
 .grid-header {
@@ -140,6 +140,7 @@ body {
     margin: 20px;
     /* width: 600px; */
     padding: 10px;
+    border-radius: 5px;
 }
 
 .facility-name h1{
@@ -148,6 +149,7 @@ body {
     margin-bottom: 20px;
     background-color: rgb(245,93,62,0.6);
     padding: 5px;
+    border-radius: 5px;
 }
 
 .facility-name p {
@@ -178,6 +180,7 @@ body {
     /* width: 600px; */
     overflow: auto;
     padding: 10px;
+
     /* border: 2px solid black; */
 }
 
@@ -186,6 +189,7 @@ body {
     height: 300px;
     /* border: 2px solid white; */
     margin: 5px;
+    margin-top: 120px;
 }
 
 #forecast-display {
