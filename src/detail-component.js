@@ -17,7 +17,7 @@ export function makeImageTemplate(data) {
         <div id="image-container">
         ${data.RECDATA.map(image => {
             return /*html*/ `
-                <img src="${image.URL}" alt="campsite photo">
+                <img src="${image.URL}" alt="campsite photo" class="slideshow-image">
             `
         }).join('')}
         </div>

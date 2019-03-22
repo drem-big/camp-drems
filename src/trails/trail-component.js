@@ -41,8 +41,6 @@ function getDistance(trail) {
     fetch(distanceUrl)
         .then(res => res.json())
         .then(results => {
-            console.log(results);
-            
             const distance = results.rows[0].elements[0].distance.text;
             const duration = results.rows[0].elements[0].duration.text;
             const distanceText = document.getElementById(`distance-${trail.id}`);
