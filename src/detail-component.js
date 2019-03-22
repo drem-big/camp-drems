@@ -16,7 +16,7 @@ export default function makeDetailTemplate(data) {
 
 export function makeImageTemplate(data) {
     const html = /*html*/ `
-        <div id="image-container">
+        <div class="image-container">
         ${data.RECDATA.map(image => {
             return /*html*/ `
                 <img src="${image.URL}" alt="campsite photo" class="slideshow-image">
