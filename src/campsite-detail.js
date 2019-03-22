@@ -67,5 +67,3 @@ function loadImages(data) {
     const dom = makeImageTemplate(data);
     main.appendChild(dom);
 }
-
-    

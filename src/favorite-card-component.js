@@ -10,7 +10,6 @@ export function makeFavoriteTemplate(campsite) {
         campsiteLocation = campsite.AddressStateCode;
     }
     
-    
     const html = /*html*/ `
         <li>
             <span><img class="campsite-favorites" src="../assets/tentwhite.png"></span>

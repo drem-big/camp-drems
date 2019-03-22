@@ -51,4 +51,3 @@ function getDistance(trail) {
             distanceTitle.textContent = 'Distance from Campground:';
         });
 }
-

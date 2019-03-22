@@ -31,7 +31,6 @@ function makeProfile(user) {
     return template.content;
 }
 
-
 const headerContainer = document.getElementById('header-container');
 export function loadHeader(options) {
 

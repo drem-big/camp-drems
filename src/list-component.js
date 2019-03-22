@@ -66,7 +66,6 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                 function addFavorite(){
                     isFavorite = true;
                     campsiteFavorite.src = '../assets/tentcolor.png';
-                    // campsiteFavorite.classList.add('favorite');
                 }
 
                 function removeFavorite() {

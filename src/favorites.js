@@ -5,7 +5,6 @@ import loadCard from '../src/list-component.js';
 import { makeFavoriteTemplate } from '../src/favorite-card-component.js';
 loadHeader();
 
-
 auth.onAuthStateChanged(user => {
     const userFavoritesRef = favoritesByUserRef.child(user.uid);
     userFavoritesRef.on('value', snapshot => {
