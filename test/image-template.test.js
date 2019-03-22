@@ -8,11 +8,11 @@ test('template displays images from media data', assert => {
     //arrange
     const expected = /*html*/ `
     <div id="image-container">
-        <img src="https://cdn.recreation.gov/public/images/76416.jpg" alt="campsite photo">
-        <img src="https://cdn.recreation.gov/public/images/76436.jpg" alt="campsite photo">
-        <img src="https://cdn.recreation.gov/public/images/76418.jpg" alt="campsite photo">
-        <img src="https://cdn.recreation.gov/public/images/76410.jpg" alt="campsite photo">
-        <img src="https://cdn.recreation.gov/public/images/76446.jpg" alt="campsite photo">
+        <img src="https://cdn.recreation.gov/public/images/76416.jpg" alt="campsite photo" class="slideshow-image">
+        <img src="https://cdn.recreation.gov/public/images/76436.jpg" alt="campsite photo" class="slideshow-image">
+        <img src="https://cdn.recreation.gov/public/images/76418.jpg" alt="campsite photo" class="slideshow-image">
+        <img src="https://cdn.recreation.gov/public/images/76410.jpg" alt="campsite photo" class="slideshow-image">
+        <img src="https://cdn.recreation.gov/public/images/76446.jpg" alt="campsite photo" class="slideshow-image">
     </div>
     `;
 
