@@ -207,6 +207,11 @@ footer {
     max-height: 800px;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;
+}
+
 #results-list li::after {
     content: '';
     position: absolute;
