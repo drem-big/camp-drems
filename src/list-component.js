@@ -3,7 +3,7 @@ import { auth, favoritesByUserRef } from './firebase.js';
 export function makeCardTemplate(campsite) {
     let campsiteURL = null;
     if(!campsite.MEDIA[0]) {
-        campsiteURL = 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg';
+        campsiteURL = 'http://www.kalkitos.sg/wp-content/uploads/2014/04/placeholder4-200x150.png';
     } else {
         campsiteURL = campsite.MEDIA[0].URL;
     }
@@ -78,7 +78,7 @@ export default function loadCard(campsiteList, makeCardTemplate) {
                 if(campsite.MEDIA && campsite.MEDIA[0] && campsite.MEDIA[0].URL) {
                     imageURL = campsite.MEDIA[0].URL;
                 } else {
-                    imageURL = 'http://noodleblvd.com/wp-content/uploads/2016/10/No-Image-Available.jpg';
+                    imageURL = 'http://www.kalkitos.sg/wp-content/uploads/2014/04/placeholder4-200x150.png';
                 }
 
                 let longitude = null;

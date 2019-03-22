@@ -61,7 +61,7 @@ html {
 
 .login-container {
     display: flex;
-    background: rgb(219, 158, 145);
+    background: rgb(245, 130, 107);
     flex-direction: column;
     text-align: center;
     height: 800px;
@@ -73,4 +73,14 @@ html {
 
 .login-container h1 {
     padding-top: 30px;
+}
+
+footer {
+    display: flex;
+    background: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50px;
+    width: 100%;
+    color: white;
 }
