@@ -1,10 +1,10 @@
 export function makeFavoriteTemplate(campsite) {
     let campsiteLocation = null;
     if(campsite.RecAreaName) {
-        campsiteLocation = campsite.RecAreaName + ' , ' + campsite.AddressStateCode;
+        campsiteLocation = campsite.RecAreaName + ', ' + campsite.AddressStateCode;
     }
     else if(campsite.City) {
-        campsiteLocation = campsite.City + ' , ' + campsite.AddressStateCode;
+        campsiteLocation = campsite.City + ', ' + campsite.AddressStateCode;
     }
     else {
         campsiteLocation = campsite.AddressStateCode;
