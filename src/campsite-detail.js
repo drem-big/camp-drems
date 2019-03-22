@@ -20,12 +20,8 @@ const trailsUrl = makeTrailsUrl(lat, lon);
 const latLon = lat + ',' + lon;
 const googleUrl = makeMapurl(latLon);
 
-const user = {
-    displayName: 'Anna',
-    photoURL: './assets/alien.png'
-};
 
-loadHeader(user);
+loadHeader();
 
 fetch(facilityUrl)
     .then(res => res.json())
