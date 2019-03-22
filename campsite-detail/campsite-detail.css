@@ -55,7 +55,7 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 10px;
     width: 100%;
     background: rgb(149, 190, 166);
 }
@@ -150,8 +150,8 @@ div {
     display: flex;
     background: black;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 150px;
+    justify-content: flex-start;
+    height: 50px;
     width: 100%;
     color: white;
 }
@@ -243,6 +243,11 @@ div {
     margin: 10px;
     margin-bottom: 50px;
  }
+/* 
+#side-by-side{
+    display: flex;
+    flex-direction: column;
+} */
 
  * {
      max-width: 100%;
